@@ -8,12 +8,15 @@ Route::get('/', function () {
 
 // dashboard
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard', [
+        "title" => "dashboard"
+    ]);
 });
 
 // devices
 Route::get('/devices', function () {
     return view('devices', [
+        "title" => "devices",
         "name" => "sensor suhu",
         "max_value" => 100,
         "min_value" => 0,
@@ -23,10 +26,14 @@ Route::get('/devices', function () {
 
 // rules
 Route::get('/rules', function () {
-    return view('rules');
+    return view('rules', [
+        "title" => "rules"
+    ]);
 });
 
 // users
 Route::get('/users', function () {
-    return view('users');
+    return view('users', [
+        "title" => "users"
+    ]);
 });
