@@ -13,7 +13,12 @@ Route::get('/dashboard', function () {
 
 // devices
 Route::get('/devices', function () {
-    return view('devices');
+    return view('devices', [
+        "name" => "sensor suhu",
+        "max_value" => 100,
+        "min_value" => 0,
+        "current_value" => 25
+    ]);
 });
 
 // rules
