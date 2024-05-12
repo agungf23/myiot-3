@@ -5,20 +5,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active"  href="/dashboard">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/devices">Devices</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/rules">Rules</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/users" >Users</a>
-          </li>
-        </ul>
+        <div class="navbar-nav">
+            <a class="nav-link {{ ($title === "dashboard") ? 'active' : '' }}" href="/dashboard">Dashboard</a>
+            <a class="nav-link {{ ($title === "devices") ? 'active' : '' }}" href="/devices">Devices</a>
+            <a class="nav-link {{ ($title === "rules") ? 'active' : '' }}" href="/rules">Rules</a>
+            <a class="nav-link {{ ($title === "users") ? 'active' : '' }}" href="/users">Users</a>
+          </div>
       </div>
     </div>
   </nav>
