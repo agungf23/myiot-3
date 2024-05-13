@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('container')
-    <h2>{{ $log["log"] }} ({{ $log["id"] }})</h2>
-    <h2>Value: {{ $log["current_value"] }}</h2>
+    <h2>{{ $device["log"] }} ({{ $device["id"] }})</h2>
+    <h2>Time: {{ $device["created_at"] }}</h2>
 
     <a href="/devices">back to Devices</a>
 @endsection
