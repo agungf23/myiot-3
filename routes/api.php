@@ -17,10 +17,10 @@ Route::put('/device/{id}', [DeviceController::class,'update']);
 Route::delete('/device/{id}', [DeviceController::class,'destroy']);
 
 // log
-Route::get('/log', [LogController::class, 'index']);
-Route::post('/log', [LogController::class, 'store']);
-Route::get('/log/{id}', [LogController::class, 'show']);
-Route::put('/log/{id}', [LogController::class,'update']);
-Route::delete('/log/{id}', [LogController::class,'destroy']);
-Route::get('/log/{timestamp}', 'LogController@showByTimestamp');
+Route::get('/data', [LogController::class, 'index']);
+Route::post('/data', [LogController::class, 'store']);
+Route::get('/data/{id}', [LogController::class, 'show']);
+Route::put('/data/{id}', [LogController::class,'update']);
+Route::delete('/data/{id}', [LogController::class,'destroy']);
+Route::get('/data/{timestamp}', 'LogController@showByTimestamp');
 
