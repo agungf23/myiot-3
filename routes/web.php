@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\LogController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Device;
+use App\Models\Log;
 
 Route::get('/', function () {
     return view('dashboard', [
@@ -22,70 +24,5 @@ Route::get('/devices', [DeviceController::class, 'web_index']);
 Route::get('/devices/{id}', [DeviceController::class, 'web_show']);
 
 //logs
-Route::get('/logs', function () {
-    $logs = [
-        [
-            "id" => 1,
-            "name" => "Sensor Suhu",
-        ],
-        [
-            "id" => 2,
-            "name" => "Kipas Angin",
-        ],
-        [
-            "id" => 3,
-            "name" => "Lampu Kamar",
-        ],
-        [
-            "id" => 4,
-            "name" => "Lampu Taman",
-        ],
-        [
-            "id" => 5,
-            "name" => "Sensor Suhu",
-        ]
-
-    ];
-    return view('logs', [
-        "title" => "logs",
-        "devices" => $logs
-    ]);
-});
-
-Route::get('/logs/{id}', function ($id) {
-    $logs = [
-        [
-            "id" => 1,
-            "name" => "Sensor Suhu",
-        ],
-        [
-            "id" => 2,
-            "name" => "Kipas Angin",
-        ],
-        [
-            "id" => 3,
-            "name" => "Lampu Kamar",
-        ],
-        [
-            "id" => 4,
-            "name" => "Lampu Taman",
-        ],
-        [
-            "id" => 5,
-            "name" => "Sensor Suhu",
-        ]
-
-    ];
-
-    $select_log = [];
-    foreach($logs as $log){
-        if($log["id"] == $id){
-            $select_log = $log;
-        }
-    };
-
-    return view('log', [
-        "title" => "log",
-        "device" => $select_log
-    ]);
-});
+Route::get('/logs', [LogController::class, 'web_index']);
+Route::get('/logs/{id}', [LogController::class, 'web_show']);
