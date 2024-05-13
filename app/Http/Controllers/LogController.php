@@ -25,18 +25,19 @@ class LogController extends Controller
             $device->current_value = $request->data;
             $device->save();
         }
-        return response()->json(["message" > "Device Added."], 201);
+        return response()->json(["message" > "Log Added."], 201);
     }
 
     public function show(string $id)
     {
-        return Log::find($id);
+        return Log::where('device_id', $id)->orderby('created_at', 'DESC')->get();
     }
 
     public function web_show($id){
         return view('device', [
             "title" => "device",
-            "device" => Device::find($id)
+            "device" => Device::find($id),
+            "log" => Log::where('device_id', $id)->orderby('created_at', 'DESC')->get()
         ]);
     }
 }
