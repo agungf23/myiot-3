@@ -17,7 +17,7 @@
             @foreach($log as $log)
             <tr>
                 <th scope="row">{{ $i }}</th>
-                <td>{{ $log["Created_at"] }}</td>
+                <td>{{ $log["created_at"] }}</td>
                 <td>{{ $log["data"] }}</td>
             </tr>
             @php
