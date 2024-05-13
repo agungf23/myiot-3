@@ -18,7 +18,7 @@
             <tr>
                 <th scope="row">{{ $i }}</th>
                 <td>
-                    <a href="/devices/{{ $device["id"] }}">{{ $device["id"] }}</a>
+                    <a href="/devices/{{ $device["created_at"] }}">{{ $device["created_at"] }}</a>
                 </td>
                 <td>{{ $device["log"] }}</td>
             </tr>

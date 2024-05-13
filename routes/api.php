@@ -22,3 +22,5 @@ Route::post('/log', [LogController::class, 'store']);
 Route::get('/log/{id}', [LogController::class, 'show']);
 Route::put('/log/{id}', [LogController::class,'update']);
 Route::delete('/log/{id}', [LogController::class,'destroy']);
+Route::get('/log/{timestamp}', 'LogController@showByTimestamp');
+

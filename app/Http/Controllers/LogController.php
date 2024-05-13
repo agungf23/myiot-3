@@ -79,4 +79,11 @@ class LogController extends Controller
             "device" => log::show($id)
         ]);
     }
+
+    public function showByTimestamp($timestamp)
+    {
+        $log = Log::where('created_at', $timestamp)->firstOrFail();
+        return view('log.show', compact('log'));
+    }
+
 }
