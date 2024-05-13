@@ -21,8 +21,8 @@ Route::get('/dashboard', function () {
 
 //devices
 Route::get('/devices', [DeviceController::class, 'web_index']);
-Route::get('/devices/{id}', [DeviceController::class, 'web_show']);
+Route::get('/devices/{id}', [LogController::class, 'web_show']);
 
-//logs
-Route::get('/logs', [LogController::class, 'web_index']);
-Route::get('/logs/{id}', [LogController::class, 'web_show']);
+// //logs
+// Route::get('/logs', [LogController::class, 'web_index']);
+// Route::get('/logs/{id}', [LogController::class, 'web_show']);
