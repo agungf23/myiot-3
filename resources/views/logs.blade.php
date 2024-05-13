@@ -14,13 +14,13 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($logs as $log)
+            @foreach($devices as $device)
             <tr>
                 <th scope="row">{{ $i }}</th>
                 <td>
-                    <a href="/logs/{{ $log["id"] }}">{{ $log["id"] }}</a>
+                    <a href="/devices/{{ $device["id"] }}">{{ $device["id"] }}</a>
                 </td>
-                <td>{{ $log["name"] }}</td>
+                <td>{{ $device["name"] }}</td>
             </tr>
             @php
                 $i++;
