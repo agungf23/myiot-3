@@ -35,17 +35,11 @@ class Device{
     ];
 
     public static function all(){
-        return self::$devices;
+        return collect(self::$devices);
     }
 
     public static function show($id){
-        $devices = self::$devices;
-        $selected_device = [];
-        foreach($devices as $device){
-            if($device["id"] == $id){
-                $selected_device = $device;
-            }
-        };
-        return $selected_device;
+        $devices = static::all();
+        return $devices->firstWhere('id', $id);
     }
 }
