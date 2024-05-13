@@ -77,7 +77,7 @@ class DeviceController extends Controller
     public function web_show($id){
         return view('device', [
             "title" => "device",
-            "device" => Device::show($id)
+            "device" => Device::find($id)
         ]);
     }
 }
