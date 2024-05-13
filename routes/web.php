@@ -18,6 +18,7 @@ Route::get('/dashboard', function () {
 
 //devices
 Route::get('/devices', function () {
+
     return view('devices', [
         "title" => "devices",
         "devices" => Device::all()
