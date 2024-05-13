@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DeviceController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Device;
 
@@ -17,20 +18,8 @@ Route::get('/dashboard', function () {
 });
 
 //devices
-Route::get('/devices', function () {
-
-    return view('devices', [
-        "title" => "devices",
-        "devices" => Device::all()
-    ]);
-});
-
-Route::get('/devices/{id}', function ($id) {
-    return view('device', [
-        "title" => "device",
-        "device" => Device::show($id)
-    ]);
-});
+Route::get('/devices', [DeviceController::class, 'index']);
+Route::get('/devices/{id}', [DeviceController::class, 'show']);
 
 // //logs
 // Route::get('/logs', function () {
