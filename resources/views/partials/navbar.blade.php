@@ -8,8 +8,7 @@
         <div class="navbar-nav">
             <a class="nav-link {{ ($title === "dashboard") ? 'active' : '' }}" href="/dashboard">Dashboard</a>
             <a class="nav-link {{ ($title === "devices") ? 'active' : '' }}" href="/devices">Devices</a>
-            <a class="nav-link {{ ($title === "rules") ? 'active' : '' }}" href="/rules">Rules</a>
-            <a class="nav-link {{ ($title === "users") ? 'active' : '' }}" href="/users">Users</a>
+            <a class="nav-link {{ ($title === "rules") ? 'active' : '' }}" href="/rules">Logs</a>
           </div>
       </div>
     </div>
