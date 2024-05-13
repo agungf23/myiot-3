@@ -1,4 +1,4 @@
-@extends('layouts.main')
+{{-- @extends('layouts.main')
 @section('container')
     <h1>Logs</h1>
 
@@ -28,4 +28,4 @@
         @endforeach
         </tbody>
     </table>
-@endsection
+@endsection --}}

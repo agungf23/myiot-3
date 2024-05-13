@@ -35,6 +35,6 @@ class Device{
     ];
 
     public static function all(){
-        return self $devices;
+        return self::$devices;
     }
 }
