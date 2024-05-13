@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->id();
-            $table->integer('device-id');
+            $table->integer('device_id');
             $table->double('data');
             $table->timestamps();
         });
