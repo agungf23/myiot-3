@@ -20,7 +20,7 @@
                 <td>
                     <a href="/devices/{{ $device["id"] }}">{{ $device["id"] }}</a>
                 </td>
-                <td>{{ $device["name"] }}</td>
+                <td>{{ $device["log"] }}</td>
             </tr>
             @php
                 $i++;
